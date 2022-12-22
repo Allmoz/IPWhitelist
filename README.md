@@ -1,6 +1,6 @@
 
-# 📃VelocityWhitelist
-A Proxy wide Whitelist for Velocity
+# 📃IPWhitelist
+A Proxy wide IP Whitelist for Velocity. Heavely based on james090500 work https://github.com/james090500/VelocityWhitelist
 
 ## Permissions
 | Permission | Purpose |
