@@ -1,8 +1,7 @@
-package com.james090500.VelocityWhitelist.listeners;
+package com.allmoz.IPWhitelist.listeners;
 
-import com.james090500.VelocityWhitelist.VelocityWhitelist;
-import com.james090500.VelocityWhitelist.config.Configs;
-import com.james090500.VelocityWhitelist.helpers.WhitelistHelper;
+import com.allmoz.IPWhitelist.config.Configs;
+import com.allmoz.IPWhitelist.helpers.WhitelistHelper;
 import com.velocitypowered.api.event.PostOrder;
 import com.velocitypowered.api.event.ResultedEvent;
 import com.velocitypowered.api.event.Subscribe;

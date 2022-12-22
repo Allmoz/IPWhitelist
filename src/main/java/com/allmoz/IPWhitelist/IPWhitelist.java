@@ -1,10 +1,10 @@
-package com.james090500.VelocityWhitelist;
+package com.allmoz.IPWhitelist;
 
+import com.allmoz.IPWhitelist.commands.CommandBuilder;
+import com.allmoz.IPWhitelist.commands.CommandHandler;
+import com.allmoz.IPWhitelist.config.Configs;
+import com.allmoz.IPWhitelist.listeners.JoinListener;
 import com.google.inject.Inject;
-import com.james090500.VelocityWhitelist.commands.CommandBuilder;
-import com.james090500.VelocityWhitelist.commands.CommandHandler;
-import com.james090500.VelocityWhitelist.config.Configs;
-import com.james090500.VelocityWhitelist.listeners.JoinListener;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.tree.LiteralCommandNode;
 import com.velocitypowered.api.command.CommandSource;
@@ -18,16 +18,16 @@ import org.slf4j.Logger;
 
 import java.nio.file.Path;
 
-@Plugin(id = "velocitywhitelist", name = "VelocityWhitelist", version = "1.0.1-SNAPSHOT", description = "A Proxy based whitelist", authors = { "james095000" })
-public class VelocityWhitelist {
+@Plugin(id = "ipwhitelist", name = "IPWhitelist", version = "1.0.0-SNAPSHOT", description = "A Proxy based whitelist", authors = { "james095000", "allmoz" })
+public class IPWhitelist {
 
-    public final String PREFIX = "[VelocityWhitelist] ";
+    public final String PREFIX = "[IPWhitelist] ";
     @Getter private final ProxyServer server;
     @Getter private final Logger logger;
     @Getter private final Path dataDirectory;
 
     @Inject
-    public VelocityWhitelist(ProxyServer server, Logger logger, @DataDirectory Path dataDirectory) {
+    public IPWhitelist(ProxyServer server, Logger logger, @DataDirectory Path dataDirectory) {
         this.server = server;
         this.logger = logger;
         this.dataDirectory = dataDirectory;
@@ -43,7 +43,7 @@ public class VelocityWhitelist {
 
         //Setup command flow
         final CommandHandler handler = new CommandHandler(this);
-        LiteralCommandNode<CommandSource> rootNode = LiteralArgumentBuilder.<CommandSource>literal("vwhitelist").build();
+        LiteralCommandNode<CommandSource> rootNode = LiteralArgumentBuilder.<CommandSource>literal("ipwhitelist").build();
 
         //Register commands
         CommandBuilder.register(this);

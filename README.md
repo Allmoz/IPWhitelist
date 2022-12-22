@@ -5,18 +5,18 @@ A Proxy wide Whitelist for Velocity
 ## Permissions
 | Permission | Purpose |
 |--|--|
-| `vwhitelist.admin` | Needed for all `/vwhitelist` commands |
-| `vwhitelist.bypass` | Can bypass whitelist even if not in list |
+| `ipwhitelist.admin` | Needed for all `/ipwhitelist` commands |
+| `ipwhitelist.bypass` | Can bypass whitelist even if not in list |
 
 ## Commands
 | Command | Response |
 |--|--|
-| `/vwhitelist` | Info command |
-| `/vwhitelist on` | Turn the whitelist on |
-| `/vwhitelist off` | Turn the whitelist off |
-| `/vwhitelist add <username>` | Add a user to the whitelist |
-| `/vwhitelist remove <username>` | Remove a user from the whitelist |
-| `/vwhitelist reload` | Reload the whitelist config |
+| `/ipwhitelist` | Info command |
+| `/ipwhitelist on` | Turn the whitelist on |
+| `/ipwhitelist off` | Turn the whitelist off |
+| `/ipwhitelist add <ip>` | Add a ip to the whitelist |
+| `/ipwhitelist remove <ip>` | Remove a ip from the whitelist |
+| `/ipwhitelist reload` | Reload the whitelist config |
 
 ## Config
 ```toml
