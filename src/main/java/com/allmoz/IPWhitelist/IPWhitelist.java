@@ -18,7 +18,7 @@ import org.slf4j.Logger;
 
 import java.nio.file.Path;
 
-@Plugin(id = "ipwhitelist", name = "IPWhitelist", version = "1.0.0-SNAPSHOT", description = "A Proxy based whitelist", authors = { "james095000", "allmoz" })
+@Plugin(id = "ipwhitelist", name = "IPWhitelist", version = "1.0.1-SNAPSHOT", description = "A Proxy based IP whitelist", authors = { "james095000", "allmoz" })
 public class IPWhitelist {
 
     public final String PREFIX = "[IPWhitelist] ";

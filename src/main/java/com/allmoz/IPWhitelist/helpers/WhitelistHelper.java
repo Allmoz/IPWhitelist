@@ -34,7 +34,7 @@ public class WhitelistHelper {
      */
     public void add(String ip) {
         ipWhitelist.getServer().getScheduler().buildTask(ipWhitelist, () -> {
-            if(InetAddressValidator.getInstance().isValid(ip)) {
+            if(!InetAddressValidator.getInstance().isValid(ip)) {
                 source.sendMessage(LegacyComponentSerializer.legacyAmpersand().deserialize("&c" + ipWhitelist.PREFIX + ip + " is not a valid ip"));
             } else if(Configs.getWhitelist().contains(ip)) {
                 source.sendMessage(LegacyComponentSerializer.legacyAmpersand().deserialize("&a" + ipWhitelist.PREFIX + ip + " is already in the whitelist"));
@@ -52,7 +52,7 @@ public class WhitelistHelper {
      */
     public void remove(String ip) {
         ipWhitelist.getServer().getScheduler().buildTask(ipWhitelist, () -> {
-            if(InetAddressValidator.getInstance().isValid(ip)) {
+            if(!InetAddressValidator.getInstance().isValid(ip)) {
                 source.sendMessage(LegacyComponentSerializer.legacyAmpersand().deserialize("&c" + ipWhitelist.PREFIX + ip + " is not a valid ip"));
             } else if(!Configs.getWhitelist().contains(ip)) {
                 source.sendMessage(LegacyComponentSerializer.legacyAmpersand().deserialize("&a" + ipWhitelist.PREFIX + ip + " is not in the whitelist"));
