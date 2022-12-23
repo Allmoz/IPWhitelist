@@ -37,7 +37,7 @@ public class CommandHandler {
     public int turnOn(CommandContext<CommandSource> commandSourceCommandContext) {
         CommandSource source = commandSourceCommandContext.getSource();
         if(Configs.getConfig().isEnabled()) {
-            source.sendMessage(LegacyComponentSerializer.legacyAmpersand().deserialize("&c" + ipWhitelist.PREFIX + "I Whitelist is already turned on"));
+            source.sendMessage(LegacyComponentSerializer.legacyAmpersand().deserialize("&c" + ipWhitelist.PREFIX + "IPWhitelist is already turned on"));
         } else {
             Configs.getConfig().setEnabled(true);
             Configs.saveConfig(ipWhitelist);
@@ -89,13 +89,13 @@ public class CommandHandler {
      */
     public int remove(CommandContext<CommandSource> commandSourceCommandContext) {
         CommandSource source = commandSourceCommandContext.getSource();
-        ParsedArgument<CommandSource, ?> username = commandSourceCommandContext.getArguments().get("ip");
-        if(username == null) {
+        ParsedArgument<CommandSource, ?> ip = commandSourceCommandContext.getArguments().get("ip");
+        if(ip == null) {
             source.sendMessage(LegacyComponentSerializer.legacyAmpersand().deserialize("&c" + ipWhitelist.PREFIX + "Syntax /ipwhitelist remove <ip>"));
             return 1;
         }
 
-        new WhitelistHelper(ipWhitelist, source).remove((String) username.getResult());
+        new WhitelistHelper(ipWhitelist, source).remove((String) ip.getResult());
         return 1;
     }
 
